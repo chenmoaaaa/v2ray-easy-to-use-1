@@ -1,45 +1,47 @@
-V2ray easy to use.
-以下方法仅支持Debian/Ubuntu
+<html>
+V2ray easy to use.<br>
+以下方法仅支持Debian/Ubuntu<br>
+<br>
+1.注册域名，参见：<br>
+https://doub.io/dbwz-3/<br>
+https://doub.io/dbwz-4/<br>
 
-1.注册域名，参见：
-https://doub.io/dbwz-3/
-https://doub.io/dbwz-4/
-
-2.安装V2ray：
-apt-get update && apt-get install wget && wget --no-check-certificate https://toutyrater.github.io/install-release.sh && bash install-release.sh
-
-3.下载配置文件，并启动V2ray：
-rm /etc/v2ray/config.json && wget --no-check-certificate -qO /etc/v2ray/config.json "https://download.ctcgfw.ml/linux/v2ray/ws%2Btls/config.json" && service v2ray restart
-
-4.安装Caddy：
-wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh
-
-5.下载Caddy配置文件
-wget --no-check-certificate -qO /usr/local/caddy/Caddyfile "https://download.ctcgfw.ml/linux/v2ray/ws%2Btls/Caddyfile"
-
-6.下载混淆网页
-cd && mkdir www && cd www && mkdir wwwroot && cd wwwroot && apt-get install unzip && wget --no-check-certificate https://download.ctcgfw.ml/linux/v2ray/ws%2Btls/v2ray.zip && unzip v2ray.zip && rm v2ray.zip
-
-7.按提示替换Caddy配置文件中的汉字：
-apt-get install vim && vi /usr/local/caddy/Caddyfile
-（附：Vim工具使用教程：https://doub.io/linux-jc1）
-
-8.修改完毕后，重启Caddy：
-service caddy restart
-
-9.下载V2ray客户端：https://www.v2ray.com/ui_client/
-
-10.配置说明：
-若您完全安装本文所述安装，那么您采用的模板是ws+tls。
-地址(Address)：即您的域名
-端口(Port)：443
-用户ID(ID)：3922f464-d02d-4124-82bf-ad350c19aacf
-额外ID(AlterId)：64
-加密方式(Security)：None
-传输协议(Network)：ws
-别名(Remarks)：随您的喜好填写任意字符
-伪装类型(Type）：None
-伪装域名/其他项：/tmp/video
-底层传输安全(TLS)：tls
-
-更多内容，参见：https://toutyrater.github.io
+2.安装V2ray：<br>
+apt-get update && apt-get install wget && wget --no-check-certificate https://toutyrater.github.io/install-release.sh && bash install-release.sh<br>
+<br>
+3.下载配置文件，并启动V2ray：<br>
+rm /etc/v2ray/config.json && wget --no-check-certificate -qO /etc/v2ray/config.json "https://download.ctcgfw.ml/linux/v2ray/ws%2Btls/config.json" && service v2ray restart<br>
+<br>
+4.安装Caddy：<br>
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh<br>
+<br>
+5.下载Caddy配置文件<br>
+wget --no-check-certificate -qO /usr/local/caddy/Caddyfile "https://download.ctcgfw.ml/linux/v2ray/ws%2Btls/Caddyfile"<br>
+<br>
+6.下载混淆网页<br>
+cd && mkdir www && cd www && mkdir wwwroot && cd wwwroot && apt-get install unzip && wget --no-check-certificate https://download.ctcgfw.ml/linux/v2ray/ws%2Btls/v2ray.zip && unzip v2ray.zip && rm v2ray.zip<br>
+<br>
+7.按提示替换Caddy配置文件中的汉字：<br>
+apt-get install vim && vi /usr/local/caddy/Caddyfile<br>
+（附：Vim工具使用教程：https://doub.io/linux-jc1）<br>
+<br>
+8.修改完毕后，重启Caddy：<br>
+service caddy restart<br>
+<br>
+9.下载V2ray客户端：https://www.v2ray.com/ui_client/<br>
+<br>
+10.配置说明：<br>
+若您完全安装本文所述安装，那么您采用的模板是ws+tls。<br>
+地址(Address)：即您的域名<br>
+端口(Port)：443<br>
+用户ID(ID)：3922f464-d02d-4124-82bf-ad350c19aacf<br>
+额外ID(AlterId)：64<br>
+加密方式(Security)：None<br>
+传输协议(Network)：ws<br>
+别名(Remarks)：随您的喜好填写任意字符<br>
+伪装类型(Type）：None<br>
+伪装域名/其他项：/tmp/video<br>
+底层传输安全(TLS)：tls<br>
+<br>
+更多内容，参见：https://toutyrater.github.io<br>
+</html>
