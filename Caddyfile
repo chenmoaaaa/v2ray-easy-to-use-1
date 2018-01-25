@@ -1,7 +1,7 @@
 https://你的域名
 {
   root /www/wwwroot/v2ray
-  tls 你的邮箱
+  tls everyone@gmail.com
   proxy /tmp/video localhost:10000 {
     websocket
     header_upstream -Origin
