@@ -1,47 +1,78 @@
+<!doctype html>
 <html>
-V2ray easy to use.<br>
-以下方法仅支持Debian/Ubuntu<br>
-<br>
-1.注册域名，参见：<br>
-https://doub.io/dbwz-3/<br>
-https://doub.io/dbwz-4/<br>
-<br>
-2.安装V2ray：<br>
-apt-get update && apt-get install wget && wget --no-check-certificate https://v2ray.liping.ml/install-release.sh && bash install-release.sh<br>
-<br>
-3.下载配置文件，并启动V2ray：<br>
-rm /etc/v2ray/config.json && wget --no-check-certificate -qO /etc/v2ray/config.json "https://v2ray.liping.ml/config.json" && service v2ray restart<br>
-<br>
-4.安装Caddy：<br>
-wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh<br>
-<br>
-5.下载Caddy配置文件<br>
-wget --no-check-certificate -qO /usr/local/caddy/Caddyfile "https://v2ray.liping.ml/Caddyfile"<br>
-<br>
-6.下载混淆网页<br>
-cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot && apt-get install unzip && wget --no-check-certificate https://v2ray.liping.ml/v2ray.zip && unzip v2ray.zip && rm v2ray.zip<br>
-<br>
-7.按提示替换Caddy配置文件中的汉字：<br>
-apt-get install vim && vi /usr/local/caddy/Caddyfile<br>
-（附：Vim工具使用教程：https://doub.io/linux-jc1）<br>
-<br>
-8.修改完毕后，重启Caddy：<br>
-service caddy restart<br>
-<br>
-9.下载V2ray客户端：https://www.v2ray.com/ui_client/<br>
-<br>
-10.配置说明：<br>
-若您完全安装本文所述安装，那么您采用的模板是ws+tls。<br>
-地址(Address)：即您的域名<br>
-端口(Port)：443<br>
-用户ID(ID)：3922f464-d02d-4124-82bf-ad350c19aacf<br>
-额外ID(AlterId)：64<br>
-加密方式(Security)：None<br>
-传输协议(Network)：ws<br>
-别名(Remarks)：随您的喜好填写任意字符<br>
-伪装类型(Type）：None<br>
-伪装域名/其他项：/tmp/video<br>
-底层传输安全(TLS)：tls<br>
-<br>
-更多内容，参见：https://toutyrater.github.io<br>
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="./favicon.png" />
+  <title>V2ray快速部署手册 - LiPing's mother boom boom boom - v2ray.liping.ml</title>
+  <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="//cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </head>
+<body>
+	<div class="container" style="margin-top:0%;">
+  		<div class="jumbotron">
+        <div class="panel panel-success">
+        <div class="panel-heading">
+          <div style="text-align:center">
+        <h2>V2ray easy to use</h2>
+           </div>
+          </div>
+        </div>
+          <p><h3><li>这是一个V2ray部署教程，可以简单快速的在您的vps部署好一个可以使用的V2ray程序。</li></h3></p>
+          <p><h3><li>以下方法仅支持 <font color="red">Debian/Ubuntu</font> ！</li></h3></p>
+          <p><h3><li>The following methods only support <font color="red">Debian / Ubuntu</font> !</li></h3></p>
+          <hr />
+          <p><h4><li>1.注册域名，参考：</li></h4></p>
+          <p><h5><a href="https://doub.io/dbwz-3/">教你申请.tk/.ml/.cf/.gq/.ga等免费域名</a></h5></p>
+          <p><h5><a href="https://doub.io/dbwz-4/">使用 CloudXNS 接管 Freenom 的免费域名解析，加快国内生效速度！</a></h5></p>
+          <p><h4><li>2.更新、下载所需要的系统组件：</li></h4></p>
+            <p><pre><code>apt-get update && apt-get install wget</code></pre></p>
+          <p><h4><li>3.下载并安装V2ray：</li></h4></p>
+            <p><pre><code>wget --no-check-certificate https://v2ray.liping.ml/install-release.sh && bash install-release.sh</code></pre></p>
+          <p><h4><li>4.下载配置文件，并启动V2ray：</li></h4></p>
+            <p><pre><code>rm /etc/v2ray/config.json && wget --no-check-certificate -qO /etc/v2ray/config.json "https://v2ray.liping.ml/config.json" && service v2ray restart</code></pre></p>
+          <p><h4><li>5.安装Caddy：</li></h4></p>
+            <p><pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh</code></pre></p>
+          <p><h4><li>6.下载Caddy配置文件：</li></h4></p>
+            <p><pre><code>wget --no-check-certificate -qO /usr/local/caddy/Caddyfile "https://v2ray.liping.ml/Caddyfile"</code></pre></p>
+          <p><h4><li>7.下载混淆网页：</li></h4></p>
+            <p><pre><code>cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot && apt-get install unzip && wget --no-check-certificate https://v2ray.liping.ml/v2ray.zip && unzip v2ray.zip && rm v2ray.zip</code></pre></p>
+          <p><h4><li>8.按提示替换Caddy配置文件中的汉字：</li></h4></p>
+            <p><pre><code>apt-get install vim && vi /usr/local/caddy/Caddyfile</code></pre></p>
+          <p><h5>（附：Vim工具使用教程：<a href="https://doub.io/linux-jc1/">Linux 文本编辑器 Vim 真 · 简单使用教程</a>）</h5></p>
+          <p><h4><li>9.修改完毕后，重启Caddy：</li></h4></p>
+            <p><pre><code>service caddy restart</code></pre></p>
+          <p><h4><li>10.下载V2ray客户端：<a href="https://www.v2ray.com/ui_client">客户端与服务 · Project V 官方网站</a></li></h4></p>
+          <hr />
+          <p><h3><li>配置说明：</li></h3></p>
+          <p><h5>若您完全安装本文所述安装，那么您采用的模板是ws+tls。</h5></p>
+          <p><h5>地址(Address)：即您的域名</h5></p>
+          <p><h5>端口(Port)：443</h5></p>
+          <p><h5>用户ID(ID)：3922f464-d02d-4124-82bf-ad350c19aacf</h5></p>
+          <p><h5>额外ID(AlterId)：64</h5></p>
+          <p><h5>加密方式(Security)：None</h5></p>
+          <p><h5>传输协议(Network)：ws</h5></p>
+          <p><h5>别名(Remarks)：随您的喜好填写任意字符</h5></p>
+          <p><h5>伪装类型(Type）：None</h5></p>
+          <p><h5>伪装域名/其他项：/tmp/video</h5></p>
+          <p><h5>底层传输安全(TLS)：tls</h5></p>
+          <hr />
+          <p><h2><li>更多内容，参考：</li></h2></p>
+          <p><a href="https://www.v2ray.com">Project V · Project V 官方网站</a></p>
+          <p><a href="https://toutyrater.github.io">V2Ray 配置指南|V2Ray 白话文教程</a></p>
+          <hr />
+	      <div style="text-align:center">
+            <p><h3><li>LiPing's Mother Glory Boom！</li></h3></p>
+            <p><li>快去找 <a href="https://t.me/Graham_John">李平先生</a>吹牛逼吧！</li></p>
+            <p><li>加入 <a href="https://t.me/zhangdavid">智障联盟语录</a> ，获取一手劲爆资源！</li></p>
+	        <p><li>请购买<a href="https://www.vultr.com/?ref=7265311">Vultr SSD VPS</a>，以保证李平先生的机场能够正常运行。</li></p>
+	        <p><li>本页面已对PC端优化，强烈推荐使用支持Liglish语言的浏览器访问本页面。</li></p>
+	        <p><li>部分代码由<a href="https://www.bt.cn/">BT-Panel</a>提供。若您需要Reoprt个Abouse，请联系<a href="https://twitter.com/Fe1IYang">Fe1Yang</a>。</li></p>
+	        <p>Hosted by <a href="https://github.com" style="font-weight: bold">GitHub</a> & Powered by <a href="https://www.netlify.com" style="font-weight: bold">Netlify</a></p>
+            <p>Designed by <a href="https://fyol.xyz" style="font-weight: bold">FeiYang Online Team</a></p>
+	        ©2018-2030 liping.ml. All Rights Reserved.
+          </div>
+        </div>
+	</div>
+</body>
 </html>
