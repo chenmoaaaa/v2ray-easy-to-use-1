@@ -22,7 +22,9 @@ sed -i "s/3922f464-d02d-4124-82bf-ad350c19aacf/${UUID}/g" "/etc/v2ray/config.jso
 
 sed -i "s/10000/${PORT}/g" "/usr/local/caddy/Caddyfile"
 
-apt-get install vim && vi /usr/local/caddy/Caddyfile
+apt-get install vim
+
+vi /usr/local/caddy/Caddyfile
 
 Address=$(sed -n '1p' "/usr/local/caddy/Caddyfile")
 
