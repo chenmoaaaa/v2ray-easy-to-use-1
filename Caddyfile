@@ -1,7 +1,7 @@
-https://ÄãµÄÓòÃû
+https://ä½ çš„åŸŸå
 {
   root /www/wwwroot/v2ray
-  tls ÄãµÄÓÊÏä
+  tls ä½ çš„é‚®ç®±
   proxy /tmp/video localhost:10000 {
     websocket
     header_upstream -Origin
