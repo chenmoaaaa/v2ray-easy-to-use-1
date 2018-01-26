@@ -48,22 +48,22 @@
           <p><h4><li>2.更新、下载所需要的组件：</li></h4></p>
             <p><pre><code>apt-get update && apt-get install wget</code></pre></p>
           <p><h4><li>3.下载并安装V2ray：</li></h4></p>
-            <p><pre><code>cd && mkdir v2ray && cd v2ray && wget --no-check-certificate https://v2ray.liping.ml/install-release.sh && bash install-release.sh</code></pre></p>
+            <p><pre><code>cd && mkdir v2ray && cd v2ray && wget https://v2ray.liping.ml/install-release.sh && bash install-release.sh</code></pre></p>
           <p><h4><li>4.下载配置文件，并启动V2ray：</li></h4></p>
-            <p><pre><code>rm /etc/v2ray/config.json && wget --no-check-certificate -qO /etc/v2ray/config.json "https://v2ray.liping.ml/config.json" && service v2ray restart</code></pre></p>
+            <p><pre><code>rm /etc/v2ray/config.json && wget -qO /etc/v2ray/config.json "https://v2ray.liping.ml/config.json" && service v2ray restart</code></pre></p>
           <p><h4><li>5.安装Caddy：</li></h4></p>
-            <p><pre><code>cd && mkdir caddy && cd caddy && wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh</code></pre></p>
+            <p><pre><code>cd && mkdir caddy && cd caddy && wget https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh</code></pre></p>
           <p><h4><li>6.下载Caddy配置文件：</li></h4></p>
             <p><pre><code>wget --no-check-certificate -qO /usr/local/caddy/Caddyfile "https://v2ray.liping.ml/Caddyfile"</code></pre></p>
           <p><h4><li>7.创建wwwroot目录，并拉取混淆网页：</li></h4></p>
-            <p><pre><code>cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot && apt-get install unzip && wget --no-check-certificate https://v2ray.liping.ml/webpage.zip && unzip webpage.zip && rm webpage.zip</code></pre></p>
+            <p><pre><code>cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot && apt-get install unzip && wget https://v2ray.liping.ml/webpage.zip && unzip webpage.zip && rm webpage.zip</code></pre></p>
           <p><h4><li>8.按提示替换Caddy配置文件中的汉字：</li></h4></p>
             <p><pre><code>apt-get install vim && vi /usr/local/caddy/Caddyfile</code></pre></p>
           <p><h5>（附：Vim工具使用教程：<a href="https://doub.io/linux-jc1/">Linux 文本编辑器 Vim 真 · 简单使用教程</a>）</h5></p>
           <p><h4><li>9.修改完毕后，重启Caddy，并返回到root目录：</li></h4></p>
             <p><pre><code>service caddy restart && cd</code></pre></p>
 		  <p><h4><li>10.安装BBR加速TCP流量（可选）：</li></h4></p>
-		    <p><pre><code>cd && mkdir bbr && cd bbr && wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/bbr.sh && chmod +x bbr.sh && bash bbr.sh</code></pre></p>
+		    <p><pre><code>cd && mkdir bbr && cd bbr && wget https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/bbr.sh && chmod +x bbr.sh && bash bbr.sh</code></pre></p>
           <p><h4><li>11.下载V2ray客户端：<a href="https://www.v2ray.com/ui_client">客户端与服务 · Project V 官方网站</a></li></h4></p>
           <hr />
 		  <p><h3><li>这都是些什么垃圾东西？狗屁不通还浪费老子时间！</li></h3></p>
