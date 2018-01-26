@@ -47,6 +47,7 @@ function install_v2ray(){
 	service v2ray restart
 	wget https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh | bash 
 	wget -qO /usr/local/caddy/Caddyfile "https://v2ray-install.netlify.com/Caddyfile" 
+    cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot
 	wget https://v2ray-install.netlify.com/webpage.zip
 	unzip webpage.zip
 	rm webpage.zip -rf 
