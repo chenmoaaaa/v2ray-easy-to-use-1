@@ -23,7 +23,7 @@ function checkenv(){
 }
 
 function change_configs(){
-	rootness
+    rootness
 	checkenv
 	let PORT=$RANDOM+10000 && UUID=$(cat /proc/sys/kernel/random/uuid) && hostname=$(hostname) && sed -i "s/10000/${PORT}/g" "/etc/v2ray/config.json" && sed -i "s/3922f464-d02d-4124-82bf-ad350c19aacf/${UUID}/g" "/etc/v2ray/config.json" && sed -i "s/10000/${PORT}/g" "/usr/local/caddy/Caddyfile"
 	vim /usr/local/caddy/Caddyfile
