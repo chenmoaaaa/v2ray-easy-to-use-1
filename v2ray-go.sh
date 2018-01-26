@@ -36,7 +36,7 @@ function checkos(){
 }
 
  
-#  Install v2ray
+
 function install_v2ray(){
 	rootness
 	checkos
@@ -57,7 +57,6 @@ function install_v2ray(){
 	echo "这是您的连接信息：" 
 	echo "别名(Remarks)：${hostname}" 
 	echo "地址(Address)：${Address}" >> "./v2ray-go/v2info.txt" &&echo "端口(Port):443" >> "./v2ray-go/v2info.txt" &&echo "用户ID(ID):${UUID}" >> "./v2ray-go/v2info.txt" &&echo "额外ID(AlterID):64" >> "./v2ray-go/v2info.txt" &&echo "加密方式(Security)：none" >> "./v2ray-go/v2info.txt" &&	echo "伪装类型(Type）：none" >> "./v2ray-go/v2info.txt" &&echo "伪装域名/其他项：/liping" >> "./v2ray-go/v2info.txt" &&echo "底层传输安全(TLS)：tls" >> "./v2ray-go/v2info.txt" 
-	#sed -i 's/^.......//' "./v2ray-go/v2info.txt" 
 	cat "./v2ray-go/v2info.txt" 
 	echo "本文件保存在：/root/v2ray-go/v2info.txt"
 }
