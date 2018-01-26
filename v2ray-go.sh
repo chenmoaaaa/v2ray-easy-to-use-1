@@ -30,7 +30,7 @@ function checkos(){
     elif [ ! -z "`cat /etc/issue | grep Ubuntu`" ];then
         OS='ubuntu'
     else
-        echo "Not support OS, Please reinstall OS and retry!"
+        echo "Not support OS, Please change OS and retry!"
         exit 1
     fi
 }
