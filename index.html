@@ -54,7 +54,7 @@
           <p><h4><li>5.安装Caddy：</li></h4></p>
             <p><pre><code>cd && mkdir caddy && cd caddy && wget https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh</code></pre></p>
           <p><h4><li>6.下载Caddy配置文件：</li></h4></p>
-            <p><pre><code>wget --no-check-certificate -qO /usr/local/caddy/Caddyfile "https://v2ray.liping.ml/Caddyfile"</code></pre></p>
+            <p><pre><code>wget -qO /usr/local/caddy/Caddyfile "https://v2ray.liping.ml/Caddyfile"</code></pre></p>
           <p><h4><li>7.创建wwwroot目录，并拉取混淆网页：</li></h4></p>
             <p><pre><code>cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot && apt-get install unzip && wget https://v2ray.liping.ml/webpage.zip && unzip webpage.zip && rm webpage.zip</code></pre></p>
           <p><h4><li>8.按提示替换Caddy配置文件中的汉字：</li></h4></p>
