@@ -10,7 +10,8 @@ function rootness(){
     fi
 }
 
-function checkenv(){
+function checkos(){
+    rootness
     if [ -f /etc/redhat-release ];then
         echo "Your OS type is CentOS."
     elif [ ! -z "`cat /etc/issue | grep bian`" ];then
@@ -22,3 +23,4 @@ function checkenv(){
         exit 1
     fi
 }
+       checkos
