@@ -33,7 +33,7 @@
           <p><h5>若您完全安装下文所述进行安装，那么您采用的模板是ws+tls+web。</h5></p>
           <p><h5>地址(Address)：即您的域名</h5></p>
           <p><h5>端口(Port)：443</h5></p>
-          <p><h5>用户ID(ID)：3922f464-d02d-4124-82bf-ad350c19aacf</h5></p>
+          <p><h5>用户ID(ID)：由系统生成</h5></p>
           <p><h5>额外ID(AlterId)：100</h5></p>
           <p><h5>加密方式(Security)：none</h5></p>
           <p><h5>传输协议(Network)：ws</h5></p>
@@ -62,18 +62,20 @@
           <p><h5>（附：Vim工具使用教程：<a href="https://doub.io/linux-jc1/">Linux 文本编辑器 Vim 真 · 简单使用教程</a>）</h5></p>
           <p><h4><li>9.修改完毕后，重启Caddy，并返回到root目录：</li></h4></p>
             <p><pre><code>service caddy restart && cd</code></pre></p>
-		  <p><h4><li>10.安装BBR加速TCP流量（可选）：</li></h4></p>
-		    <p><pre><code>cd && mkdir bbr && cd bbr && wget https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/bbr.sh && chmod +x bbr.sh && bash bbr.sh</code></pre></p>
-          <p><h4><li>11.下载V2ray客户端：<a href="https://www.v2ray.com/ui_client">客户端与服务 · Project V 官方网站</a></li></h4></p>
+          <p><h4><li>10.生成UUID&Port，并返回配置信息：</li></h4></p>
+            <p><pre><code>cd v2ray && wget https://v2ray.liping.ml/checkinfo.sh</code></pre></p>
+	  <p><h4><li>11.安装BBR加速TCP流量（可选）：</li></h4></p>
+	    <p><pre><code>cd && mkdir bbr && cd bbr && wget https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/bbr.sh && chmod +x bbr.sh && bash bbr.sh</code></pre></p>
+          <p><h4><li>12.下载V2ray客户端：<a href="https://www.v2ray.com/ui_client">客户端与服务 · Project V 官方网站</a></li></h4></p>
           <hr />
-		  <p><h3><li>这都是些什么垃圾东西？狗屁不通还浪费老子时间！</li></h3></p>
-		  <p><h4>所以请不要浪费您宝贵的时间了，赶紧用回SS/R去吧，什么封锁什么精准识别都是谣言，现在依然活得很好。</h4></p>
+	  <p><h3><li>这都是些什么垃圾东西？狗屁不通还浪费老子时间！</li></h3></p>
+	  <p><h4>所以请不要浪费您宝贵的时间了，赶紧用回SS/R去吧，什么封锁什么精准识别都是谣言，现在依然活得很好。</h4></p>
           <hr />
           <p><h2><li>更多内容，参考：</li></h2></p>
           <p><a href="https://www.v2ray.com">Project V · Project V 官方网站</a></p>
           <p><a href="https://toutyrater.github.io">V2Ray 配置指南|V2Ray 白话文教程</a></p>
           <hr />
-	      <div style="text-align:center">
+	  <div style="text-align:center">
             <p><h3><li>LiPing's Mother Glory Boom！</li></h3></p>
             <p><li>快去找 <a href="https://t.me/Graham_John">李平先生</a> 吹牛逼吧！</li></p>
             <p><li>加入 <a href="https://t.me/zhangdavid">智障联盟语录</a> ，获取一手劲爆资源！</li></p>
@@ -85,7 +87,7 @@
             <p>Designed by <a href="https://fyol.xyz" style="font-weight: bold">FeiYang Online Team</a></p>
 	    ©2018-2030 liping.ml. All Rights Reserved.
           </div>
-        </div>
+         </div>
 	</div>
 </body>
 </html>
