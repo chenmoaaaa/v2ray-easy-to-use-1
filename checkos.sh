@@ -23,4 +23,4 @@ function checkos(){
         exit 1
     fi
 }
-       checkos
+    checkos
