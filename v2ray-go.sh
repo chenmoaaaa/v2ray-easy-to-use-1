@@ -25,13 +25,13 @@ function install_v2ray(){
 	rootness
 	checkos
 	checkenv
-	wget https://v2ray-install.netlify.com/install-release.sh | bash 
+	curl https://v2ray-install.netlify.com/install-release.sh && bash install-release.sh
 	rm "/etc/v2ray/config.json" -rf 
 	wget -qO /etc/v2ray/config.json "https://v2ray-install.netlify.com/config.json" 
 	service v2ray restart
-	wget https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh | bash 
+	curl https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh && bash caddy_install.sh
 	wget -qO /usr/local/caddy/Caddyfile "https://v2ray-install.netlify.com/Caddyfile" 
-    cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot
+        cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot
 	wget https://v2ray-install.netlify.com/webpage.zip
 	unzip webpage.zip
 	rm webpage.zip -rf 
