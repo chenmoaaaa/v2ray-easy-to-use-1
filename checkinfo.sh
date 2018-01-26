@@ -1,3 +1,7 @@
+#! /bin/bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+
 # Make sure only root can run our script
 function rootness(){
     if [[ $EUID -ne 0 ]]; then
@@ -20,7 +24,7 @@ function checkenv(){
 
 function change_configs(){
 	rootness
-	checkos
+	checkenv
 	let PORT=$RANDOM+10000 && UUID=$(cat /proc/sys/kernel/random/uuid) && hostname=$(hostname) && sed -i "s/10000/${PORT}/g" "/etc/v2ray/config.json" && sed -i "s/3922f464-d02d-4124-82bf-ad350c19aacf/${UUID}/g" "/etc/v2ray/config.json" && sed -i "s/10000/${PORT}/g" "/usr/local/caddy/Caddyfile"
 	vim /usr/local/caddy/Caddyfile
 	service v2ray restart && service caddy restart
