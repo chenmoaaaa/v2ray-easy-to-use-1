@@ -39,15 +39,15 @@ function install_v2ray(){
 	vim /usr/local/caddy/Caddyfile
 	service v2ray restart && service caddy restart
 	Address=$(sed -n '1p' "/usr/local/caddy/Caddyfile") 
-	echo "这是您的连接信息：" 
-	echo "别名(Remarks)：${hostname}" 
-	echo "地址(Address)：${Address}"
-	echo "端口(Port):443"
-	echo "用户ID(ID):${UUID}"
-	echo "额外ID(AlterID):64"
-	echo "加密方式(Security)：none"
-	echo "伪装类型(Type）：none"
-	echo "伪装域名/其他项：/liping"
-	echo "底层传输安全(TLS)：tls"
+	echo -e "这是您的连接信息：\n" 
+	echo -e "别名(Remarks)：${hostname}\n" 
+	echo -e "地址(Address)：${Address}\n"
+	echo -e "端口(Port):443\n"
+	echo -e "用户ID(ID):${UUID}\n"
+	echo -e "额外ID(AlterID):64\n"
+	echo -e "加密方式(Security)：none\n"
+	echo -e "伪装类型(Type）：none\n"
+	echo -e "伪装域名/其他项：/liping\n"
+	echo -e "底层传输安全(TLS)：tls\n"
 }
     install_v2ray
