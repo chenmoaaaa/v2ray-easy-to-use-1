@@ -13,11 +13,11 @@ function rootness(){
 
 function checkos(){
     if [ -f /etc/redhat-release ];then
-        echo "You OS type is Centos."
+        echo "Your OS type is Centos."
     elif [ ! -z "`cat /etc/issue | grep bian`" ];then
-        echo "You OS type is Debian."
+        echo "Your OS type is Debian."
     elif [ ! -z "`cat /etc/issue | grep Ubuntu`" ];then
-        echo "You OS type is Ubuntu."
+        echo "Your OS type is Ubuntu."
     else
         echo "Not support OS, Please change OS and retry!"
         exit 1
