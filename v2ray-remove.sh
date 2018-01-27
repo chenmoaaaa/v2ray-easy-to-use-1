@@ -49,4 +49,4 @@ function remove_v2ray(){
     rm -rf /www
     echo -e "Uninstall is completed, thank you for your use!" 
 }
-    #remove_v2ray
+    remove_v2ray
