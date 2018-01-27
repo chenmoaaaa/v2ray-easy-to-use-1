@@ -3,16 +3,16 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
  
 function change_info(){
+    let PORT=$RANDOM+10000
+    sed -i "s/10000/${PORT}/g" "/etc/v2ray/config.json"
+    sed -i "s/3922f464-d02d-4124-82bf-ad350c19aacf/${UUID}/g" "/etc/v2ray/config.json"
+    sed -i "s/10000/${PORT}/g" "/usr/local/caddy/Caddyfile"
     read -p "请输入您的域名：" url
     echo ""${url#*"://"}"" > /tmp/caddyaddress.txt
     sed -i "s#/##g" "/tmp/caddyaddress.txt"
     Address=$(cat "/tmp/caddyaddress.txt")
     rm -rf /tmp/caddyaddress.txt
     echo -e "您的域名为: ${Address}"
-    let PORT=$RANDOM+10000
-    sed -i "s/10000/${PORT}/g" "/etc/v2ray/config.json"
-    sed -i "s/3922f464-d02d-4124-82bf-ad350c19aacf/${UUID}/g" "/etc/v2ray/config.json"
-    sed -i "s/10000/${PORT}/g" "/usr/local/caddy/Caddyfile"
     sed -i "s#V2rayAddress#https://${Address}#g" "/usr/local/caddy/Caddyfile"
     UUID=$(cat /proc/sys/kernel/random/uuid)
     hostname=$(hostname)
