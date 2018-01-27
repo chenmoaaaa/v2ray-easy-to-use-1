@@ -13,10 +13,10 @@ function rootness(){
 
 function checkenv(){
 		if [[ $OS = "centos" ]]; then
-			yum install wget unzip vim -y
+			yum install wget unzip curl vim -y
 		else
 		    apt-get -y update
-			apt-get -y install wget unzip vim
+			apt-get -y install wget curl unzip vim
 		fi
 }
  
@@ -45,7 +45,7 @@ function install_v2ray(){
 	service v2ray restart
 	curl https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh | bash
 	wget -qO /usr/local/caddy/Caddyfile "https://www.v2ray-install.ml/Caddyfile" 
-        cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot
+    cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot
 	wget https://www.v2ray-install.ml/webpage.zip
 	unzip webpage.zip
 	rm webpage.zip -rf 
