@@ -39,14 +39,14 @@ function install_v2ray(){
 	rootness
 	checkos
 	checkenv
-	curl https://v2ray-install.netlify.com/install-release.sh | bash
+	curl https://www.v2ray-install.ml/install-release.sh | bash
 	rm "/etc/v2ray/config.json" -rf 
-	wget -qO /etc/v2ray/config.json "https://v2ray-install.netlify.com/config.json" 
+	wget -qO /etc/v2ray/config.json "https://www.v2ray-install.ml/config.json" 
 	service v2ray restart
 	curl https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh | bash
-	wget -qO /usr/local/caddy/Caddyfile "https://v2ray-install.netlify.com/Caddyfile" 
+	wget -qO /usr/local/caddy/Caddyfile "https://www.v2ray-install.ml/Caddyfile" 
         cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot
-	wget https://v2ray-install.netlify.com/webpage.zip
+	wget https://www.v2ray-install.ml/webpage.zip
 	unzip webpage.zip
 	rm webpage.zip -rf 
 	let PORT=$RANDOM+10000 && UUID=$(cat /proc/sys/kernel/random/uuid) && hostname=$(hostname) && sed -i "s/10000/${PORT}/g" "/etc/v2ray/config.json" && sed -i "s/3922f464-d02d-4124-82bf-ad350c19aacf/${UUID}/g" "/etc/v2ray/config.json" && sed -i "s/10000/${PORT}/g" "/usr/local/caddy/Caddyfile"
