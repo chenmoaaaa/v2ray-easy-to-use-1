@@ -44,42 +44,9 @@
 	  <p><pre><code>wget https://www.v2ray-install.ml/v2ray-remove.sh && bash v2ray-remove.sh && rm -rf v2ray-remove.sh</code></pre></p>
           <p><h4><li>一键重装脚本：</li></h4></p>
 	  <p><pre><code>wget https://www.v2ray-install.ml/v2ray-reborn.sh && bash v2ray-reborn.sh && rm -rf v2ray-reborn.sh</code></pre></p>
-          <hr />
-          <p><h3><li>手动配置说明：</li></h3></p>
-          <p><h4>以下方法仅支持 <font color="red">CentOS/Debian/Ubuntu</font> ！</h4></p>
-          <p><h4>The following methods only support <font color="red">CentOS / Debian / Ubuntu</font> !</h4></p>
-          <p><h4><li>若您完全安装下文所述进行安装，那么您采用的模板是ws+tls+web。</li></h4></p>
-          <p><h5>地址(Address)：即您的域名</h5></p>
-          <p><h5>端口(Port)：443</h5></p>
-          <p><h5>用户ID(ID)：由系统生成</h5></p>
-          <p><h5>额外ID(AlterId)：100</h5></p>
-          <p><h5>加密方式(Security)：none</h5></p>
-          <p><h5>传输协议(Network)：ws</h5></p>
-          <p><h5>别名(Remarks)：随您的喜好填写任意字符</h5></p>
-          <p><h5>伪装类型(Type）：none</h5></p>
-          <p><h5>伪装域名/其他项：/tmp/video</h5></p>
-          <p><h5>底层传输安全(TLS)：tls</h5></p>
-          <br />
-          <p><h4><li>1.注册域名，参考：</li></h4></p>
-          <p><h5><a href="https://doub.io/dbwz-3/">教你申请.tk/.ml/.cf/.gq/.ga等免费域名</a></h5></p>
-          <p><h5><a href="https://doub.io/dbwz-4/">使用 CloudXNS 接管 Freenom 的免费域名解析，加快国内生效速度！</a></h5></p>
-          <p><h4><li>2.检查OS兼容情况，并更新系统组件：</li></h4></p>
-            <p><pre><code>wget https://www.v2ray-install.ml/checkos.sh && bash checkos.sh && rm -rf checkos.sh</code></pre></p>
-          <p><h4><li>3.安装V2ray：</li></h4></p>
-            <p><pre><code>curl https://www.v2ray-install.ml/install-release.sh | bash</code></pre></p>
-          <p><h4><li>4.下载V2ray配置文件：</li></h4></p>
-            <p><pre><code>rm /etc/v2ray/config.json && wget -qO /etc/v2ray/config.json "https://www.v2ray-install.ml/config.json"</code></pre></p>
-          <p><h4><li>5.安装Caddy：</li></h4></p>
-            <p><pre><code>curl https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh | bash</code></pre></p>
-          <p><h4><li>6.下载Caddy配置文件：</li></h4></p>
-            <p><pre><code>wget -qO /usr/local/caddy/Caddyfile "https://www.v2ray-install.ml/Caddyfile"</code></pre></p>
-          <p><h4><li>7.创建wwwroot目录，拉取混淆网页，并返回root目录：</li></h4></p>
-            <p><pre><code>cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot && wget https://www.v2ray-install.ml/webpage.zip && unzip webpage.zip && rm webpage.zip && cd</code></pre></p>
-          <p><h4><li>8.修改配置，生成UUID&Port，并返回配置信息：</li></h4></p>
-            <p><pre><code>curl https://www.v2ray-install.ml/change-info.sh | bash</code></pre></p>
-	  <p><h4><li>9.安装BBR加速TCP流量（可选）：</li></h4></p>
+          <p><h4><li>安装BBR加速TCP流量（可选）：</li></h4></p>
 	    <p><pre><code>curl https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/bbr.sh | bash</code></pre></p>
-          <p><h4><li>10.下载V2ray客户端：<a href="https://www.v2ray.com/ui_client">客户端与服务 · Project V 官方网站</a></li></h4></p>
+          <p><h4><li>下载V2ray客户端：<a href="https://www.v2ray.com/ui_client">客户端与服务 · Project V 官方网站</a></li></h4></p>
           <hr />
 	  <p><h3><li>这都是些什么垃圾东西？狗屁不通还浪费老子时间！</li></h3></p>
 	  <p><h4>所以请不要浪费您宝贵的时间了，赶紧用回SS/R去吧，什么封锁什么精准识别都是谣言，现在依然活得很好。</h4></p>
