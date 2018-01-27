@@ -36,15 +36,6 @@ function change_info(){
     sed -i "s/10000/${PORT}/g" "/usr/local/caddy/Caddyfile"
     service v2ray restart && service caddy restart
     Address=$(sed -n '1p' "/usr/local/caddy/Caddyfile") 
-    echo -e "这是您的连接信息：" 
-    echo -e "别名(Remarks)：${hostname}" 
-    echo -e "地址(Address)：${Address}"
-    echo -e "端口(Port):443"
-    echo -e "用户ID(ID):${UUID}"
-    echo -e "额外ID(AlterID):100"
-    echo -e "加密方式(Security)：none"
-    echo -e "伪装类型(Type）：none"
-    echo -e "伪装域名/其他项：/tmp/video"
-    echo -e "底层传输安全(TLS)：tls"
+    echo -e "这是您的连接信息：\n" && echo -e "别名(Remarks)：${hostname}\n" && echo -e "地址(Address)：${Address}\n" && echo -e "端口(Port):443\n" && echo -e "用户ID(ID):${UUID}\n" && echo -e "额外ID(AlterID):100\n" && echo -e "加密方式(Security)：none\n" && echo -e "伪装类型(Type）：none\n" && echo -e "伪装域名/其他项：/tmp/video\n" && echo -e "底层传输安全(TLS)：tls\n" 
 }
     change_info
