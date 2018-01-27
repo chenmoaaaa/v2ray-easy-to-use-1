@@ -61,7 +61,7 @@ function install_v2ray(){
 	echo -e "额外ID(AlterID):64\n"
 	echo -e "加密方式(Security)：none\n"
 	echo -e "伪装类型(Type）：none\n"
-	echo -e "伪装域名/其他项：/liping\n"
+	echo -e "伪装域名/其他项：/tmp/video\n"
 	echo -e "底层传输安全(TLS)：tls\n"
 }
     install_v2ray
