@@ -27,6 +27,7 @@ function checkos(){
 
 function checkenv(){
     if [[ $OS = "centos" ]]; then
+       yum update -y
        yum install wget unzip curl vim -y
     else
        apt-get -y update
