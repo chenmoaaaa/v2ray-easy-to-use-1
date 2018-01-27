@@ -14,14 +14,14 @@ function rootness(){
 
 function checkos(){
     if [ -f /etc/redhat-release ];then
-        echo "Your OS type is Centos."
+       echo "Your OS type is Centos."
     elif [ ! -z "`cat /etc/issue | grep bian`" ];then
-        echo "Your OS type is Debian."
+       echo "Your OS type is Debian."
     elif [ ! -z "`cat /etc/issue | grep Ubuntu`" ];then
-        echo "Your OS type is Ubuntu."
+       echo "Your OS type is Ubuntu."
     else
-        echo "Not support OS, Please change OS and retry!"
-        exit 1
+       echo "Not support OS, Please change OS and retry!"
+       exit 1
     fi
 }
 
@@ -30,10 +30,11 @@ function checkenv(){
     checkos
     rootness
     if [[ $OS = "centos" ]]; then
-        yum install wget unzip vim curl -y
+       yum update -y
+       yum install wget unzip vim curl -y
     else
-        apt-get -y update
-        apt-get -y install wget unzip vim curl
+       apt-get -y update
+       apt-get -y install wget unzip vim curl
     fi
 }
     checkenv
