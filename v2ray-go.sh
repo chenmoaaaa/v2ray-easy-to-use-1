@@ -6,7 +6,6 @@ export PATH
 function rootness(){
     if [[ $EUID -ne 0 ]]; then
        echo "Error:This script must be run as root,please run 'sudo su' first." 1>&2
-       rm v2ray-go.sh -rf
        exit 1
     fi
 }
@@ -21,7 +20,6 @@ function checkos(){
         OS='ubuntu'
     else
         echo "Not support OS, Please change OS and retry!"
-        rm v2ray-go.sh -rf
         exit 1
     fi
 }
@@ -70,6 +68,5 @@ function install_v2ray(){
     echo -e "伪装类型(Type）：none\n"
     echo -e "伪装域名/其他项：/tmp/video\n"
     echo -e "底层传输安全(TLS)：tls\n"
-    rm v2ray-go.sh -rf
 }
     install_v2ray
