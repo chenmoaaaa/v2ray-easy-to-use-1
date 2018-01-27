@@ -3,8 +3,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
  
 function change_info(){
-    service v2ray restart && service caddy restart
-    stty erase '^H' && read -p "请输入您的域名：" url
+    read -p "请输入您的域名：" url
     echo ""${url#*"://"}"" > /tmp/caddyaddress.txt
     sed -i "s#/##g" "/tmp/caddyaddress.txt"
     Address=$(cat "/tmp/caddyaddress.txt")
