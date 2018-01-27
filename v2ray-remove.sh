@@ -6,7 +6,6 @@ export PATH
 function rootness(){
     if [[ $EUID -ne 0 ]]; then
        echo "Error:This script must be run as root,please run 'sudo su' first." 1>&2
-	   rm v2ray-remove.sh -rf
        exit 1
     fi
 
@@ -22,7 +21,6 @@ function checkos(){
         OS='ubuntu'
     else
         echo "Not support OS, Please change OS and retry!"
-		rm v2ray-remove.sh -rf
         exit 1
     fi
 }
@@ -39,6 +37,5 @@ function remove_v2ray(){
     rm /usr/local/caddy/Caddyfile -rf
     rm -rf /www
     echo -e "Uninstall is completed, thank you for your use!" 
-    rm v2ray-remove.sh -rf
 }
     remove_v2ray
