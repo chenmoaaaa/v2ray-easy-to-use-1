@@ -34,6 +34,6 @@ function checkenv(){
         apt-get -y update
         apt-get -y install wget unzip vim curl
     fi
-	rm checkos.sh -rf
+    rm checkos.sh -rf
 }
     checkenv
