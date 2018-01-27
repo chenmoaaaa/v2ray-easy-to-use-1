@@ -28,7 +28,12 @@ function checkos(){
 function change_info(){
     rootness
     checkos
-    let PORT=$RANDOM+10000 && UUID=$(cat /proc/sys/kernel/random/uuid) && hostname=$(hostname) && sed -i "s/10000/${PORT}/g" "/etc/v2ray/config.json" && sed -i "s/3922f464-d02d-4124-82bf-ad350c19aacf/${UUID}/g" "/etc/v2ray/config.json" && sed -i "s/10000/${PORT}/g" "/usr/local/caddy/Caddyfile"
+    let PORT=$RANDOM+10000
+    UUID=$(cat /proc/sys/kernel/random/uuid)
+    hostname=$(hostname)
+    sed -i "s/10000/${PORT}/g" "/etc/v2ray/config.json"
+    sed -i "s/3922f464-d02d-4124-82bf-ad350c19aacf/${UUID}/g" "/etc/v2ray/config.json"
+    sed -i "s/10000/${PORT}/g" "/usr/local/caddy/Caddyfile"
     service v2ray restart && service caddy restart
     Address=$(sed -n '1p' "/usr/local/caddy/Caddyfile") 
     echo -e "这是您的连接信息：" 
