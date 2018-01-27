@@ -6,9 +6,10 @@ export PATH
 function rootness(){
     if [[ $EUID -ne 0 ]]; then
        echo "Error:This script must be run as root,please run 'sudo su' first." 1>&2
+       rm checkos.sh -rf
        exit 1
     fi
-    rm checkos.sh -rf
+
 }
 
 
@@ -21,9 +22,9 @@ function checkos(){
         echo "Your OS type is Ubuntu."
     else
         echo "Not support OS, Please change OS and retry!"
+        rm checkos.sh -rf
         exit 1
     fi
-    rm checkos.sh -rf
 }
 
 
