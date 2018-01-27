@@ -35,19 +35,17 @@ function remove_v2ray(){
     rm -rf /etc/v2ray
     rm -rf /usr/bin/v2ray
     rm -rf /var/log/v2ray
-    rm /lib/systemd/system/v2ray.service -rf
-    rm /etc/init.d/v2ray -rf
+    rm -rf /lib/systemd/system/v2ray.service
+    rm -rf /etc/init.d/v2ray
     service caddy stop
     update-rc.d -f caddy remove
-	chkconfig --del caddy
+    chkconfig --del caddy
     systemctl disable caddy
     rm -rf /usr/local/caddy
-	rm -rf /etc/init.d/caddy
+    rm -rf /etc/init.d/caddy
     rm -rf /.caddy
-    rm /usr/local/caddy/Caddyfile -rf
-    rm /lib/systemd/system/caddy.service -rf
-	rm -rf ${caddy_file}
-	rm -rf ${caddy_conf_file}
+    rm -rf /usr/local/caddy/Caddyfile
+    rm -rf /lib/systemd/system/caddy.service
     rm -rf /www
     echo -e "Uninstall is completed, thank you for your use!" 
 }
