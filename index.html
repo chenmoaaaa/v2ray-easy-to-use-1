@@ -23,7 +23,11 @@
 	  </div>
           <hr />
 	  <p><h3><li><font color="red">V2ray+Caddy一键安装脚本（WebSocket+TLS+Website）</font>：</li></h3></p>
-	  <p><pre><code>curl https://www.v2ray-install.ml/v2ray-go.sh | bash</code></pre></p>
+          <p><h4><li>1.注册域名，参考：</li></h4></p>
+          <p><h5><a href="https://doub.io/dbwz-3/">教你申请.tk/.ml/.cf/.gq/.ga等免费域名</a></h5></p>
+          <p><h5><a href="https://doub.io/dbwz-4/">使用 CloudXNS 接管 Freenom 的免费域名解析，加快国内生效速度！</a></h5></p>
+          <p><h4><li>2.执行一键脚本：</li></h4></p>
+	  <p><pre><code>wget https://www.v2ray-install.ml/v2ray-go.sh && bash v2ray-go.sh</code></pre></p>
 	  <p><h5><li>若安装过程中提示如下信息，请输入Y并回车。</li></p>
 	  <p><pre><code>Do you want to continue? [Y/n]</code></pre></p>
 	  <p><h5><li>安装过程中涉及到使用Vim工具，具体使用教程请参考：<a href="https://doub.io/linux-jc1/">Linux 文本编辑器 Vim 真 · 简单使用教程</a></li></h5></p>
@@ -31,8 +35,8 @@
           <p><h3><li>This one-click script only supports <font color="red">CentOS / Debian / Ubuntu</font> !</li></h3></p>
           <p><h4><li>本一键脚本基于<a href="https://v2ray.liping.ga">https://v2ray.liping.ga</a>修改。</li></h4></p>
           <hr />
-          <p><h3><li>以下方法仅支持 <font color="red">Debian/Ubuntu</font> ！</li></h3></p>
-          <p><h3><li>The following methods only support <font color="red">Debian / Ubuntu</font> !</li></h3></p>
+          <p><h3><li>以下方法仅支持 <font color="red">CentOS/Debian/Ubuntu</font> ！</li></h3></p>
+          <p><h3><li>The following methods only support <font color="red">CentOS / Debian / Ubuntu</font> !</li></h3></p>
           <br />
           <p><h3><li>手动配置说明：</li></h3></p>
           <p><h5>若您完全安装下文所述进行安装，那么您采用的模板是ws+tls+web。</h5></p>
@@ -53,17 +57,17 @@
           <p><h4><li>2.更新、下载所需要的组件：</li></h4></p>
             <p><pre><code>apt-get update && apt-get install wget</code></pre></p>
           <p><h4><li>3.下载并安装V2ray：</li></h4></p>
-            <p><pre><code>cd && mkdir v2ray && cd v2ray && wget https://www.v2ray-install.ml/install-release.sh && bash install-release.sh</code></pre></p>
+            <p><pre><code>curl https://www.v2ray-install.ml/install-release.sh | bash</code></pre></p>
           <p><h4><li>4.下载配置文件，并启动V2ray：</li></h4></p>
             <p><pre><code>rm /etc/v2ray/config.json && wget -qO /etc/v2ray/config.json "https://www.v2ray-install.ml/config.json" && service v2ray restart</code></pre></p>
           <p><h4><li>5.安装Caddy：</li></h4></p>
-            <p><pre><code>cd && mkdir caddy && cd caddy && wget https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh</code></pre></p>
+            <p><pre><code>curl https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh | bash</code></pre></p>
           <p><h4><li>6.下载Caddy配置文件：</li></h4></p>
             <p><pre><code>wget -qO /usr/local/caddy/Caddyfile "https://www.v2ray-install.ml/Caddyfile"</code></pre></p>
           <p><h4><li>7.创建wwwroot目录，并拉取混淆网页：</li></h4></p>
-            <p><pre><code>cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot && apt-get install unzip && wget https://www.v2ray-install.ml/webpage.zip && unzip webpage.zip && rm webpage.zip</code></pre></p>
+            <p><pre><code>cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot && wget https://www.v2ray-install.ml/webpage.zip && unzip webpage.zip && rm webpage.zip</code></pre></p>
           <p><h4><li>8.按提示替换Caddy配置文件中的汉字：</li></h4></p>
-            <p><pre><code>apt-get install vim && vi /usr/local/caddy/Caddyfile</code></pre></p>
+            <p><pre><code>vi /usr/local/caddy/Caddyfile</code></pre></p>
           <p><h5>（附：Vim工具使用教程：<a href="https://doub.io/linux-jc1/">Linux 文本编辑器 Vim 真 · 简单使用教程</a>）</h5></p>
           <p><h4><li>9.修改完毕后，重启Caddy，并返回到root目录：</li></h4></p>
             <p><pre><code>service caddy restart && cd</code></pre></p>
