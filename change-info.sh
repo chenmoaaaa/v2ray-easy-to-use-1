@@ -26,23 +26,24 @@ function checkos(){
 
  
 function change_info(){
-	rootness
-	checkos
-	let PORT=$RANDOM+10000 && UUID=$(cat /proc/sys/kernel/random/uuid) && hostname=$(hostname) && sed -i "s/10000/${PORT}/g" "/etc/v2ray/config.json" && sed -i "s/3922f464-d02d-4124-82bf-ad350c19aacf/${UUID}/g" "/etc/v2ray/config.json" && sed -i "s/10000/${PORT}/g" "/usr/local/caddy/Caddyfile"
-	service v2ray restart && service caddy restart
-	Address0=$(sed -n '1p' "/usr/local/caddy/Caddyfile") 
-	Address=${Address0#*"://"}
-	mkdir -p /root/v2ray-go/
-	cd /root/
-	echo -e "这是您的连接信息：\n" 
-	echo -e "别名(Remarks)：${hostname}\n" 
-	echo -e "地址(Address)：${Address}\n"
-	echo -e "端口(Port):443\n"
-	echo -e "用户ID(ID):${UUID}\n"
-	echo -e "额外ID(AlterID):64\n"
-	echo -e "加密方式(Security)：none\n"
-	echo -e "伪装类型(Type）：none\n"
-	echo -e "伪装域名/其他项：/liping\n"
-	echo -e "底层传输安全(TLS)：tls\n"
+    rootness
+    checkos
+    let PORT=$RANDOM+10000 && UUID=$(cat /proc/sys/kernel/random/uuid) && hostname=$(hostname) && sed -i "s/10000/${PORT}/g" "/etc/v2ray/config.json" && sed -i "s/3922f464-d02d-4124-82bf-ad350c19aacf/${UUID}/g" "/etc/v2ray/config.json" && sed -i "s/10000/${PORT}/g" "/usr/local/caddy/Caddyfile"
+    service v2ray restart && service caddy restart
+    Address0=$(sed -n '1p' "/usr/local/caddy/Caddyfile") 
+    Address=${Address0#*"://"}
+    mkdir -p /root/v2ray-go/
+    cd /root/
+    echo -e "这是您的连接信息：\n " 
+    echo -e "别名(Remarks)：${hostname}\n " 
+    echo -e "地址(Address)：${Address}\n "
+    echo -e "端口(Port):443\n "
+    echo -e "用户ID(ID):${UUID}\n "
+    echo -e "额外ID(AlterID):100\n "
+    echo -e "加密方式(Security)：none\n "
+    echo -e "伪装类型(Type）：none\n"
+    echo -e "伪装域名/其他项：/tmp/video\n "
+    echo -e "底层传输安全(TLS)：tls\n "
+    echo -e " \n "
 }
     change_info
