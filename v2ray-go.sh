@@ -6,19 +6,9 @@ export PATH
 function rootness(){
     if [[ $EUID -ne 0 ]]; then
        echo "Error:This script must be run as root,please run 'sudo su' first." 1>&2
+       rm v2ray-go.sh -rf
        exit 1
     fi
-}
-
-
-function checkenv(){
-    if [[ $OS = "centos" ]]; then
-       yum install wget unzip curl vim -y
-    else
-       apt-get -y update
-       apt-get -y install wget curl unzip vim
-    fi
-    rm v2ray-go.sh -rf
 }
  
  
@@ -31,9 +21,19 @@ function checkos(){
         OS='ubuntu'
     else
         echo "Not support OS, Please change OS and retry!"
+        rm v2ray-go.sh -rf
         exit 1
     fi
-    rm v2ray-go.sh -rf
+}
+
+
+function checkenv(){
+    if [[ $OS = "centos" ]]; then
+       yum install wget unzip curl vim -y
+    else
+       apt-get -y update
+       apt-get -y install wget curl unzip vim
+    fi
 }
 
 
