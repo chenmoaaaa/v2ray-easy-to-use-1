@@ -43,4 +43,4 @@ function reborn_v2ray(){
 	curl https://www.v2ray-install.ml/v2ray-remove.sh | bash
 	curl https://www.v2ray-install.ml/v2ray-go.sh | bash
 }
-    #reborn_v2ray
+    reborn_v2ray
