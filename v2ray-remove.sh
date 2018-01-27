@@ -30,11 +30,24 @@ function remove_v2ray(){
     rootness
     checkos
     service v2ray stop
-    curl https://www.v2ray-install.ml/install-release.sh && bash install-release.sh --remove
-    rm "/etc/v2ray/config.json" -rf 
+    update-rc.d -f v2ray remove
+    systemctl disable v2ray
+    rm -rf /etc/v2ray
+    rm -rf /usr/bin/v2ray
+    rm -rf /var/log/v2ray
+    rm /lib/systemd/system/v2ray.service -rf
+    rm /etc/init.d/v2ray -rf
     service caddy stop
-    curl https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh && bash caddy_install.sh uninstall
+    update-rc.d -f caddy remove
+	chkconfig --del caddy
+    systemctl disable caddy
+    rm -rf /usr/local/caddy
+	rm -rf /etc/init.d/caddy
+    rm -rf /.caddy
     rm /usr/local/caddy/Caddyfile -rf
+    rm /lib/systemd/system/caddy.service -rf
+	rm -rf ${caddy_file}
+	rm -rf ${caddy_conf_file}
     rm -rf /www
     echo -e "Uninstall is completed, thank you for your use!" 
 }
