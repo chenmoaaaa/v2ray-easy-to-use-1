@@ -45,11 +45,16 @@ function install_v2ray(){
 	service v2ray restart
 	curl https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh | bash
 	wget -qO /usr/local/caddy/Caddyfile "https://www.v2ray-install.ml/Caddyfile" 
-    cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot
+        cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot
 	wget https://www.v2ray-install.ml/webpage.zip
 	unzip webpage.zip
 	rm webpage.zip -rf 
-	let PORT=$RANDOM+10000 && UUID=$(cat /proc/sys/kernel/random/uuid) && hostname=$(hostname) && sed -i "s/10000/${PORT}/g" "/etc/v2ray/config.json" && sed -i "s/3922f464-d02d-4124-82bf-ad350c19aacf/${UUID}/g" "/etc/v2ray/config.json" && sed -i "s/10000/${PORT}/g" "/usr/local/caddy/Caddyfile"
+	let PORT=$RANDOM+10000
+	UUID=$(cat /proc/sys/kernel/random/uuid)
+	hostname=$(hostname)
+	sed -i "s/10000/${PORT}/g" "/etc/v2ray/config.json"
+	sed -i "s/3922f464-d02d-4124-82bf-ad350c19aacf/${UUID}/g" "/etc/v2ray/config.json"
+	sed -i "s/10000/${PORT}/g" "/usr/local/caddy/Caddyfile"
 	vim /usr/local/caddy/Caddyfile
 	service v2ray restart && service caddy restart
 	Address=$(sed -n '1p' "/usr/local/caddy/Caddyfile") 
