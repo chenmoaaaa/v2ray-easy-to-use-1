@@ -73,18 +73,13 @@
             <p><pre><code>curl https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh | bash</code></pre></p>
           <p><h4><li>6.下载Caddy配置文件：</li></h4></p>
             <p><pre><code>wget -qO /usr/local/caddy/Caddyfile "https://www.v2ray-install.ml/Caddyfile"</code></pre></p>
-          <p><h4><li>7.创建wwwroot目录，并拉取混淆网页：</li></h4></p>
-            <p><pre><code>cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot && wget https://www.v2ray-install.ml/webpage.zip && unzip webpage.zip && rm webpage.zip</code></pre></p>
-          <p><h4><li>8.按提示替换Caddy配置文件中的汉字：</li></h4></p>
-            <p><pre><code>vi /usr/local/caddy/Caddyfile</code></pre></p>
-          <p><h5>（附：Vim工具使用教程：<a href="https://doub.io/linux-jc1/">Linux 文本编辑器 Vim 真 · 简单使用教程</a>）</h5></p>
-          <p><h4><li>9.修改完毕后，重启Caddy，并返回到root目录：</li></h4></p>
-            <p><pre><code>service caddy restart && cd</code></pre></p>
-          <p><h4><li>10.生成UUID&Port，并返回配置信息：</li></h4></p>
+          <p><h4><li>7.创建wwwroot目录，拉取混淆网页，并返回root目录：</li></h4></p>
+            <p><pre><code>cd / && mkdir www && cd www && mkdir wwwroot && cd wwwroot && wget https://www.v2ray-install.ml/webpage.zip && unzip webpage.zip && rm webpage.zip && cd</code></pre></p>
+          <p><h4><li>8.修改配置，生成UUID&Port，并返回配置信息：</li></h4></p>
             <p><pre><code>curl https://www.v2ray-install.ml/change-info.sh | bash</code></pre></p>
-	  <p><h4><li>11.安装BBR加速TCP流量（可选）：</li></h4></p>
+	  <p><h4><li>9.安装BBR加速TCP流量（可选）：</li></h4></p>
 	    <p><pre><code>curl https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/bbr.sh | bash</code></pre></p>
-          <p><h4><li>12.下载V2ray客户端：<a href="https://www.v2ray.com/ui_client">客户端与服务 · Project V 官方网站</a></li></h4></p>
+          <p><h4><li>10.下载V2ray客户端：<a href="https://www.v2ray.com/ui_client">客户端与服务 · Project V 官方网站</a></li></h4></p>
           <hr />
 	  <p><h3><li>这都是些什么垃圾东西？狗屁不通还浪费老子时间！</li></h3></p>
 	  <p><h4>所以请不要浪费您宝贵的时间了，赶紧用回SS/R去吧，什么封锁什么精准识别都是谣言，现在依然活得很好。</h4></p>
