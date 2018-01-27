@@ -68,5 +68,6 @@ function install_v2ray(){
     echo -e "伪装类型(Type）：none\n"
     echo -e "伪装域名/其他项：/tmp/video\n "
     echo -e "底层传输安全(TLS)：tls\n "
+    echo -e " \n "
 }
     install_v2ray
