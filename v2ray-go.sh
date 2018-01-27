@@ -12,12 +12,12 @@ function rootness(){
 
 
 function checkenv(){
-		if [[ $OS = "centos" ]]; then
-			yum install wget unzip curl vim -y
-		else
-		    apt-get -y update
-			apt-get -y install wget curl unzip vim
-		fi
+    if [[ $OS = "centos" ]]; then
+       yum install wget unzip curl vim -y
+    else
+       apt-get -y update
+       apt-get -y install wget curl unzip vim
+    fi
 }
  
  
@@ -68,5 +68,6 @@ function install_v2ray(){
 	echo -e "伪装类型(Type）：none\n"
 	echo -e "伪装域名/其他项：/tmp/video\n"
 	echo -e "底层传输安全(TLS)：tls\n"
+	rm v2ray-go.sh -rf
 }
     install_v2ray
