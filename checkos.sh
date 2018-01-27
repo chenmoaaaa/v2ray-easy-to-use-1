@@ -8,6 +8,7 @@ function rootness(){
        echo "Error:This script must be run as root,please run 'sudo su' first." 1>&2
        exit 1
     fi
+    rm checkos.sh -rf
 }
 
 
@@ -22,6 +23,7 @@ function checkos(){
         echo "Not support OS, Please change OS and retry!"
         exit 1
     fi
+    rm checkos.sh -rf
 }
 
 
