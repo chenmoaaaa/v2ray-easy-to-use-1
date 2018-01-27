@@ -12,7 +12,6 @@ function rootness(){
 
 
 function checkos(){
-	rootness
     if [ -f /etc/redhat-release ];then
         echo "You OS type is Centos."
     elif [ ! -z "`cat /etc/issue | grep bian`" ];then
@@ -24,4 +23,16 @@ function checkos(){
         exit 1
     fi
 }
-    checkos
+
+
+function checkenv(){
+        checkos
+        rootness
+		if [[ $OS = "centos" ]]; then
+			yum install wget unzip vim curl -y
+		else
+		    apt-get -y update
+			apt-get -y install wget unzip vim curl
+		fi
+}
+    checkenv
