@@ -26,13 +26,13 @@ function checkos(){
 
 
 function checkenv(){
-        checkos
-        rootness
-		if [[ $OS = "centos" ]]; then
-			yum install wget unzip vim curl -y
-		else
-		    apt-get -y update
-			apt-get -y install wget unzip vim curl
-		fi
+    checkos
+    rootness
+    if [[ $OS = "centos" ]]; then
+        yum install wget unzip vim curl -y
+    else
+        apt-get -y update
+        apt-get -y install wget unzip vim curl
+    fi
 }
     checkenv
