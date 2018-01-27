@@ -66,4 +66,4 @@ function install_v2ray(){
     service v2ray restart && service caddy restart
     echo -e "\n这是您的连接信息：\n别名(Remarks)：${hostname}\n地址(Address)：${Address}\n端口(Port):443\n用户ID(ID):${UUID}\n额外ID(AlterID):100\n加密方式(Security)：none\n伪装类型(Type）：none\n伪装域名/其他项：/tmp/video\n底层传输安全(TLS)：tls\n"
 }
-    install_v2ray
+    #install_v2ray
