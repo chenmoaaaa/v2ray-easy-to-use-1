@@ -60,7 +60,7 @@ function install_v2ray(){
 	sed -i "s/10000/${PORT}/g" "/etc/v2ray/config.json"
     sed -i "s/3922f464-d02d-4124-82bf-ad350c19aacf/${UUID}/g" "/etc/v2ray/config.json"
     sed -i "s/10000/${PORT}/g" "/usr/local/caddy/Caddyfile"
-	sed -i "s#V2rayAddress#$https://{Address}#g" "/usr/local/caddy/Caddyfile"
+	sed -i "s#V2rayAddress#https://${Address}#g" "/usr/local/caddy/Caddyfile"
     UUID=$(cat /proc/sys/kernel/random/uuid)
     hostname=$(hostname)
     service v2ray restart && service caddy restart
