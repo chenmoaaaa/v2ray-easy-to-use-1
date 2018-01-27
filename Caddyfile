@@ -1,4 +1,4 @@
-你的域名（请不要填http://或者https://，修改时请把本行去掉）
+你的域名（请不要填http://或者https://，修改时请把本行替换掉）
 {
   root /www/wwwroot/v2ray
   tls website-tls@gmail.com
