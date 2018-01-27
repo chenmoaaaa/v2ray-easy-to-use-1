@@ -58,7 +58,7 @@ function install_v2ray(){
 	echo -e "地址(Address)：${Address}\n"
 	echo -e "端口(Port):443\n"
 	echo -e "用户ID(ID):${UUID}\n"
-	echo -e "额外ID(AlterID):64\n"
+	echo -e "额外ID(AlterID):100\n"
 	echo -e "加密方式(Security)：none\n"
 	echo -e "伪装类型(Type）：none\n"
 	echo -e "伪装域名/其他项：/tmp/video\n"
